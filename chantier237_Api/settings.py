@@ -63,7 +63,8 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ["*"]
+CORS_ALLOWED_ORIGINS = ['http://*', 'https://*']
+
 
 ROOT_URLCONF = 'chantier237_Api.urls'
 
@@ -90,7 +91,7 @@ WSGI_APPLICATION = 'chantier237_Api.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
-""" DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': config('DATABASE_ENGINE'),
         'NAME': config('DATABASE_NAME'),
@@ -100,16 +101,16 @@ WSGI_APPLICATION = 'chantier237_Api.wsgi.application'
         'PORT': config('DATABASE_PORT', cast=int),
     }
 }
-"""
 
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation

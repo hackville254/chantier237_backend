@@ -18,11 +18,9 @@ RUN pip install --no-cache-dir --upgrade pip \
 # Copier le code de l'application Django dans le conteneur
 COPY . /chantier237/
 
-# Collecter les fichiers statiques de Django
-RUN python manage.py collectstatic --noinput
 
 # Exposer le port sur lequel l'application Django écoute
 EXPOSE 8913
 
 # Commande pour démarrer l'application Django
-CMD ["gunicorn", "--bind", "0.0.0.0:8913", "chantier237_Api.wsgi:application"]
+# CMD ["gunicorn", "--bind", "0.0.0.0:8913", "chantier237_Api.wsgi:application"]
