@@ -144,6 +144,19 @@ USE_I18N = True
 USE_TZ = True
 
 
+JAZZMIN_SETTINGS = {
+    # title of the window (Will default to current_admin_site.site_title if absent or None)
+    "site_title": "Chantier237 Admin",
+    "site_header": "Chantier237",
+    "site_brand": "Chantier237",
+    "site_logo": "logo.png",
+    "login_logo": False,
+    "site_logo_classes": "img-circle",
+    "site_icon": None,
+    "welcome_sign": "Bienvenue sur Chantier237",
+    "copyright": " Weblease ",
+}
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
