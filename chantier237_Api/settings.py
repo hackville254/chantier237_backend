@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['http://*', 'https://*']
+CORS_ALLOWED_ORIGINS = ['https://*']
 
 
 ROOT_URLCONF = 'chantier237_Api.urls'
