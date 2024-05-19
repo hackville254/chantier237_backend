@@ -20,7 +20,7 @@ COPY . /chantier237/
 
 
 # Exposer le port sur lequel l'application Django écoute
-EXPOSE 8913
+EXPOSE 8013
 
 # Commande pour démarrer l'application Django
-# CMD ["gunicorn", "--bind", "0.0.0.0:8913", "chantier237_Api.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8013", "chantier237_Api.wsgi:application"]
