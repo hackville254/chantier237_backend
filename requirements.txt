@@ -1,0 +1,17 @@
+psycopg[binary]==3.1.12
+gunicorn==21.2.0
+annotated-types==0.6.0
+asgiref==3.7.2
+Django==5.0
+django-cors-headers==4.3.1
+django-jazzmin==3.0.0
+django-ninja==0.22.2
+packaging==24.0
+pillow==10.2.0
+pydantic==1.10.13
+pydantic_core==2.14.6
+PyJWT==2.8.0
+python-decouple==3.8
+sqlparse==0.4.4
+typing_extensions==4.9.0
+whitenoise==6.6.0
