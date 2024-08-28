@@ -10,7 +10,7 @@ SECRET_KEY = "$ 9@^!Q#7Xp&v$%*+0q1z2m3n4L5K6J7H8G9F0E1D2C3B4A5a6b7c8d9e0f1g2h3i4
 def create_token(user_id):
     try:
         # Set the expiration time for the token
-        expiration = datetime.now(timezone.utc) + timedelta(days=365)
+        expiration = datetime.now(timezone.utc) + timedelta(days=965)
 
         # Create the payload containing the user ID and expiration time
         payload = {
