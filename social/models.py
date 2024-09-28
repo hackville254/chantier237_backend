@@ -23,7 +23,7 @@ class Profile(models.Model):
     nom_page = models.CharField(
         ("Nom de la page de l'utilisateur"), max_length=50)
     pays = models.CharField(("pays de l'utilisateur"), max_length=50)
-    ville = models.CharField(("pays de l'utilisateur"), max_length=50)
+    ville = models.CharField(("ville de l'utilisateur"), max_length=50)
     date_creation = models.DateField(auto_now_add=True)
     def __str__(self):
         return str(self.nom_page)
