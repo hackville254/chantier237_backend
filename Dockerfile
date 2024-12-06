@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 8013
 
 # Commande de démarrage de l'application
-CMD ["gunicorn", "--bind", "0.0.0.0:8013", "chantier237_Api.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8483", "chantier237_Api.wsgi:application"]
