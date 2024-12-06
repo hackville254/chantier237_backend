@@ -1,25 +1,22 @@
-# Utilisation d'une image de base Alpine Linux optimisée pour Python
+# Utilisation d'une image légère basée sur Alpine Linux pour Python
 FROM python:3.10-alpine
 
-# Définir des variables d'environnement pour éviter les avertissements Python lors de l'exécution en mode non interactif
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+# Configuration des variables d'environnement
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
 
-# Créer et définir le répertoire de travail dans le conteneur
+# Définition du répertoire de travail
 WORKDIR /chantier237
 
-# Copier le fichier requirements.txt dans le conteneur
-COPY ./requirements.txt /chantier237/
-
-# Installer les dépendances Python
+# Installation des dépendances
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copier le code de l'application Django dans le conteneur
-COPY . /chantier237/
+# Copie du code source de l'application
+COPY . .
 
-
-# Exposer le port sur lequel l'application Django écoute
+# Exposition du port de l'application
 EXPOSE 8013
 
-# Commande pour démarrer l'application Django
+# Commande de démarrage de l'application
 CMD ["gunicorn", "--bind", "0.0.0.0:8013", "chantier237_Api.wsgi:application"]
